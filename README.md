@@ -3,11 +3,7 @@
 
 Welcome to Job task! This project is a React application
 
-### Live Link
-
-```bash
-https://marcuricit.vercel.app
-`
+Live Link --> https://marcuricit.vercel.app
 
 ### Server Side Code
 
