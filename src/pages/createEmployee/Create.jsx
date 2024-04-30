@@ -41,7 +41,8 @@ const Create = () => {
         }
       });
     } catch (error) {
-      console.log(error.message, "error occured when posting data");
+      console.log(error.message, "error occured while posting data");
+      setLoading(false);
     }
   };
 
