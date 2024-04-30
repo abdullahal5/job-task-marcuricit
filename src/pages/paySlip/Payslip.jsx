@@ -26,31 +26,31 @@ const Payslip = () => {
       </div>
       <div className="flex items-center gap-5 justify-between">
         <div className="pt-5 w-[50%]">
-          <h1 className="font-semibold text-xl">Earnings</h1>
+          <h1 className="font-semibold text-xl">Deductions</h1>
           <div className="relative overflow-x-auto sm:rounded-lg pt-5">
             <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
               <tbody>
                 <tr className="bg-white text-black dark:border-gray-700 flex items-center justify-between border">
-                  <td className="px-6 py-4 font-semibold">Salary</td>
-                  <td className="px-6 py-4 font-semibold">$2999</td>
-                </tr>
-                <tr className="bg-white text-black dark:border-gray-700 flex items-center justify-between border">
                   <td className="px-6 py-4 font-semibold">
-                    House Rent Allowance (H.R.A.)
+                    Tax Deducted at Source (T.D.S.)
                   </td>
-                  <td className="px-6 py-4 font-semibold">$55</td>
+                  <td className="px-6 py-4 font-semibold">$0</td>
                 </tr>
                 <tr className="bg-white text-black dark:border-gray-700 flex items-center justify-between border">
-                  <td className="px-6 py-4 font-semibold">Conveyance</td>
-                  <td className="px-6 py-4 font-semibold">$55</td>
+                  <td className="px-6 py-4 font-semibold">Provident Fund</td>
+                  <td className="px-6 py-4 font-semibold">$0</td>
                 </tr>
                 <tr className="bg-white text-black dark:border-gray-700 flex items-center justify-between border">
-                  <td className="px-6 py-4 font-semibold">Other Allowance</td>
-                  <td className="px-6 py-4 font-semibold">$55</td>
+                  <td className="px-6 py-4 font-semibold">ESI</td>
+                  <td className="px-6 py-4 font-semibold">$0</td>
                 </tr>
                 <tr className="bg-white text-black dark:border-gray-700 flex items-center justify-between border">
-                  <td className="px-6 py-4 font-semibold">Total Earnings</td>
-                  <td className="px-6 py-4 font-semibold">$55</td>
+                  <td className="px-6 py-4 font-semibold">Loan</td>
+                  <td className="px-6 py-4 font-semibold">$0</td>
+                </tr>
+                <tr className="bg-white text-black dark:border-gray-700 flex items-center justify-between border">
+                  <td className="px-6 py-4 font-semibold">Total Deductions</td>
+                  <td className="px-6 py-4 font-semibold">$59698</td>
                 </tr>
               </tbody>
             </table>
@@ -88,6 +88,10 @@ const Payslip = () => {
           </div>
         </div>
       </div>
+      <p className="font-semibold text-lg my-5">
+        Net Salary: $59698 (Fifty nine thousand six hundred and ninety eight
+        only.)
+      </p>
     </div>
   );
 };

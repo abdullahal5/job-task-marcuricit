@@ -26,7 +26,7 @@ const router = createBrowserRouter([
         path: "/payroll/payslip/update/:id",
         element: <Update />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/employees/${params.id}`),
+          fetch(`https://marcuricit-server.vercel.app/employees/${params.id}`),
       },
     ],
   },
