@@ -1,15 +1,25 @@
-const Create = () => {
+import toast, { Toaster } from "react-hot-toast";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
+import { useState } from "react";
+import { FaSpinner } from "react-icons/fa";
 
-  const handleGetFormData = (e) => {
+const Create = () => {
+  const axiosPublic = useAxiosPublic();
+  const [loading, setLoading] = useState(false);
+
+  const handleGetFormData = async (e) => {
     e.preventDefault();
+    setLoading(true);
     const firstName = e.target?.firstname?.value;
     const lastName = e.target.lastname?.value;
     const email = e.target.email?.value;
     const age = e.target.age?.value;
     const salary = e.target.salary?.value;
     const city = e.target.city?.value;
+    const company = e.target.company?.value;
     const position = e.target.position?.value;
     const number = e.target.number?.value;
+
     const data = {
       firstName,
       lastName,
@@ -18,14 +28,28 @@ const Create = () => {
       salary,
       city,
       position,
+      company,
       number,
     };
 
-    console.log(data);
+    try {
+      await axiosPublic.post("/employees", data).then((res) => {
+        if (res.data.acknowledged === true && res.data.insertedId) {
+          toast.success("Employee Details added");
+          e.target.reset();
+          setLoading(false);
+        }
+      });
+    } catch (error) {
+      console.log(error.message, "error occured when posting data");
+    }
   };
 
   return (
     <div className="bg-white py-5 px-5 rounded-lg">
+      <div>
+        <Toaster />
+      </div>
       <h1 className="text-3xl font-medium mb-5">Create Employee Details</h1>
       <form onSubmit={handleGetFormData}>
         <div className="flex items-center justify-around">
@@ -121,8 +145,10 @@ const Create = () => {
         </div>
         <button
           type="submit"
-          className="text-lg font-semibold bg-blue-500 w-full text-white my-8 py-3 rounded-lg"
+          disabled={loading === true}
+          className="text-lg font-semibold bg-blue-500 w-full text-white my-8 py-3 rounded-lg flex items-center justify-center gap-2 disabled:bg-gray-400 disabled:cursor-not-allowed"
         >
+          {loading ? <FaSpinner className="animate-spin text-white" /> : ""}
           Submit
         </button>
       </form>
