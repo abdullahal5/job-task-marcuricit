@@ -7,6 +7,7 @@ Welcome to Job task! This project is a React application
 
 ```bash
 https://marcuricit.vercel.app
+`
 
 ### Server Side Code
 
