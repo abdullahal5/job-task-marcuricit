@@ -10,9 +10,11 @@ const Slider = ({ isSliderOpen }) => {
   const toggleSubroutes = () => {
     setShowSubroutes(!showSubroutes);
   };
+
   return (
     <div className="lg:block md:block hidden border-r">
       <div
+        style={{ height: "full" }}
         className={`overflow-y-hidden h-screen left-0 transition-all duration-300 bg-white ${
           isSliderOpen ? "w-64" : "w-0"
         }`}
@@ -20,7 +22,9 @@ const Slider = ({ isSliderOpen }) => {
         <div className="text-black w-full">
           <div className="font-semibold flex items-center justify-between px-4 py-4">
             <span className="flex items-center gap-4 text-3xl">
-              <img className="w-32" src="/logo-dark.png" alt="" />
+              <Link to="/">
+                <img className="w-32" src="/logo-dark.png" alt="" />
+              </Link>
             </span>
           </div>
           <hr className="border border-gray-400 mb-4" />
@@ -52,7 +56,7 @@ const Slider = ({ isSliderOpen }) => {
                     Payslip
                   </li>
                 </Link>
-                <Link to="">
+                <Link to="/payroll/payrollItem">
                   <li className="hover:bg-gray-200 mx-2 rounded-lg py-3 px-4 flex items-center">
                     Payroll Items
                   </li>

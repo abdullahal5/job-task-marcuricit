@@ -29,7 +29,7 @@ const Navbar = ({ toggleSidebar }) => {
   }, [profileRef]);
 
   return (
-    <div>
+    <div style={{ background: "linear-gradient(135deg, #00feba, #5b548a)" }}>
       <div className="bg-white h-[68px] px-3 flex items-center justify-between">
         <div className="flex items-center gap-5">
           <p

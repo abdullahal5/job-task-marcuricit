@@ -15,10 +15,10 @@ const Dashboard = () => {
       <div>
         <Slider isSliderOpen={isSliderOpen} />
       </div>
-      <div className="flex-1">
+      <div className="flex-1 overflow-y-auto">
         <Navbar toggleSidebar={toggleSlider} />
         <div className="w-[1050px] mx-auto pt-10">
-          <Outlet />
+          <Outlet /> 
         </div>
       </div>
     </div>
