@@ -1,6 +1,13 @@
+
 # Job-Task
 
-Welcome to Project Name! This project is a React application designed for [provide brief description of the project].
+Welcome to Job task! This project is a React application
+
+Live Link --> https://marcuricit.vercel.app
+
+### Server Side Code
+
+https://github.com/abdullahal5/marcuricit-server.git
 
 ## Installation
 
@@ -20,7 +27,3 @@ cd job-task-marcuricit
 
 ```bash
 npm run dev
-
-### Server Side Code
-
-https://github.com/abdullahal5/marcuricit-server.git
